@@ -1,0 +1,100 @@
+{
+  "id": "1660776",
+  "name": "test",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "13168126",
+      "name": "collect-fill",
+      "font_class": "collect-fill",
+      "unicode": "e72a",
+      "unicode_decimal": 59178
+    },
+    {
+      "icon_id": "13168127",
+      "name": "collect",
+      "font_class": "collect",
+      "unicode": "e72b",
+      "unicode_decimal": 59179
+    },
+    {
+      "icon_id": "13168128",
+      "name": "03TABbar",
+      "font_class": "TABbar",
+      "unicode": "e729",
+      "unicode_decimal": 59177
+    },
+    {
+      "icon_id": "13168130",
+      "name": "05TABbar",
+      "font_class": "TABbar1",
+      "unicode": "e72c",
+      "unicode_decimal": 59180
+    },
+    {
+      "icon_id": "13168131",
+      "name": "05TABbar-fill",
+      "font_class": "TABbar-fill",
+      "unicode": "e72d",
+      "unicode_decimal": 59181
+    },
+    {
+      "icon_id": "13168132",
+      "name": "Eye-fill",
+      "font_class": "Eye-fill",
+      "unicode": "e72e",
+      "unicode_decimal": 59182
+    },
+    {
+      "icon_id": "13168139",
+      "name": "goods06",
+      "font_class": "goods",
+      "unicode": "e72f",
+      "unicode_decimal": 59183
+    },
+    {
+      "icon_id": "13168154",
+      "name": "location",
+      "font_class": "location",
+      "unicode": "e730",
+      "unicode_decimal": 59184
+    },
+    {
+      "icon_id": "13168156",
+      "name": "location-fill",
+      "font_class": "location-fill",
+      "unicode": "e731",
+      "unicode_decimal": 59185
+    },
+    {
+      "icon_id": "13168160",
+      "name": "menu-fill",
+      "font_class": "menu-fill",
+      "unicode": "e732",
+      "unicode_decimal": 59186
+    },
+    {
+      "icon_id": "13168166",
+      "name": "phone-fill",
+      "font_class": "phone-fill",
+      "unicode": "e733",
+      "unicode_decimal": 59187
+    },
+    {
+      "icon_id": "13168168",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "e734",
+      "unicode_decimal": 59188
+    },
+    {
+      "icon_id": "13168170",
+      "name": "share",
+      "font_class": "share",
+      "unicode": "e735",
+      "unicode_decimal": 59189
+    }
+  ]
+}
