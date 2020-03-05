@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "分类页面",
+  "navigationBarTitleText": "搜索结果",
   "usingComponents": {
        "search": "../../components/search/index"
   }

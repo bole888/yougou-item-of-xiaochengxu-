@@ -1,2 +1,53 @@
 <!--pages/category/index.wxml-->
-<text>pages/category/index.wxml</text>
+<!-- <text>pages/category/index.wxml</text> -->
+
+<view class="container">
+<search/>
+
+<view class="content">
+
+<view class="left">
+<view class="item {{current===index?'active':''}}" wx:for='{{list}}' wx:key='index' bindtap="handleclick" data-index="{{index}}">
+{{item.cat_name}}
+</view>
+</view>
+
+<view class="right">
+<view class="bgi"><navigator url="/pages/index/index" open-type="switchTab"><image mode='aspectFill'  src="http://pic1.win4000.com/wallpaper/2018-06-19/5b286ad5cd406.jpg"></image></navigator>
+</view>
+
+<view class="category" wx:for='{{list[current].children}}' wx:key='index' wx:for-item='subitem' wx:key-index='subindex'>
+<view class="category-title">
+/<text>{{subitem.cat_name}}</text>/
+</view>
+<view class="category-list">
+<block  wx:for='{{subitem.children}}' wx:key='index' wx:for-item='esitem' wx:key-index='esindex'>
+<navigator url="/pages/goods_list/index?keyword={{esitem.cat_name}}"><image src="{{esitem.cat_icon}}" mode="aspectFit"></image><view>{{esitem.cat_name}}</view></navigator>
+</block>
+</view>
+</view>
+
+
+
+
+
+
+
+
+
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+</view>
+</view>

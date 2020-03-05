@@ -1,0 +1,14 @@
+<!--components/search/index.wxml-->
+<!-- <text>components/search/index.wxml</text> -->
+
+
+<view class="header background" >
+
+<navigator url="/pages/search/index">
+<view class="input {{align}}" >
+ <icon type="search" size="40"/>
+{{keyword}}
+</view>
+</navigator>
+
+</view>

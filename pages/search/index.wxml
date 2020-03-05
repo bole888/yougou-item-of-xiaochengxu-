@@ -1,0 +1,48 @@
+<!--pages/search/index.wxml-->
+<!-- <text>pages/search/index.wxml</text> -->
+
+<view class="container" bindtap="handleclick">
+
+<view class="header">
+<!-- 请输入你想要的商品 -->
+<view class="seachbar">
+<icon type="search" size="30"/>
+<input class="weui-input"  placeholder="请输入你想要的商品" value='{{inputValue}}'
+bindinput='handleinput'   bindconfirm='handleconfirm'/>
+</view>
+<view class="cancel"  wx:if='{{inputValue}}' bindtap="handlecancel">取消</view>
+</view>
+
+
+<view class="list" wx:if='{{searchList.length}}'>
+<block wx:for='{{searchList}}'  wx:key='index'> 
+<navigator  data-id='{{item.goods_id}}' url="/pages/goods_detail/index?id={{item.goods_id}}" >{{item.goods_name}}</navigator>
+</block>
+</view>
+
+
+<view>
+<view class='fontsize'>历史搜索<text class="iconfont icon-shanchu" bindtap="delete"></text></view>
+<view class="searchlist">
+<block wx:for="{{historyList}}" wx:key='index'>
+<navigator url="/pages/goods_list/index?keyword={{item}}">
+<view class="piece">{{item}}</view>
+</navigator>
+</block>
+</view>
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>

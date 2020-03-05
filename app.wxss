@@ -1,6 +1,7 @@
 /**app.wxss**/
 
 @import "common/style.wxss";
+@import "common/font.wxss";
 @import "common/iconfont/iconfont.wxss";
 
 /* .container {

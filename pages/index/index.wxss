@@ -1,1 +1,118 @@
 /**index.wxss**/
+
+
+.header{
+  height: 70rpx;
+  width: 100%;
+  background: red;
+}
+
+
+
+.search-tab{
+  width: 100%;
+   height: 60rpx;
+   background: #fff;
+  
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+input{
+  border-radius: 5px;
+  width: 100%;
+   height: 60rpx;
+  margin: 0 10px;
+}
+
+
+.swiper-item{
+  height: 340rpx;
+}
+.swiper-item image{
+  width: 100%;
+  height: 340rpx;
+}
+
+.nav{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   margin: 30rpx 0;
+}
+ .piece image{
+  
+   width:128rpx;
+   height: 140rpx;
+ }
+
+ .floor{
+   margin: 20rpx 0;
+ }
+
+ .floor-title image{
+   width: 100%;
+   height: 60rpx;
+ }
+
+ .floor-content{
+    display: flex;
+    justify-content: space-between;
+    margin: 20rpx 15rpx;
+ }
+ 
+ /* .floor-content-left {
+        display: flex;
+         flex:1;
+ } */
+ .floor-content-right {
+   flex:1;
+   display: flex;  
+   justify-content: space-between;
+   flex-wrap: wrap;
+   padding: 5px;
+ }
+ 
+
+ .floor-content-left image{
+   width:232rpx;
+   height: 386rpx;
+ }
+ .floor-content-right image{
+   width:232rpx;
+   height: 188rpx;
+ }
+
+ .floor + .floor .floor-content-right image{
+   width: 190rpx;
+ }
+
+ .floor + .floor .floor-content-right .floor-piece:nth-child(3n+1) image{
+   width:273rpx;
+ }
+
+ .toTop{
+   width:80rpx;
+   height:80rpx;
+   border-radius: 50%;
+   background: red;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   position: fixed;
+   right: 20rpx;
+   bottom: 50rpx;
+
+ }
+
+ .arrow{
+      width:16rpx;
+      height:16rpx;
+      border-left: 1px solid #000;
+      border-top: 1px solid #000;
+      transform: rotate(45deg);
+      position: relative;
+      top: 10rpx;
+ }

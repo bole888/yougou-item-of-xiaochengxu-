@@ -1,0 +1,94 @@
+<!--pages/goods_detail/index.wxml-->
+<!-- <text>pages/goods_detail/index.wxml</text> -->
+
+<view class="container">
+
+<swiper indicator-dots circular autoplay interval="2000" duration="2000">
+        
+        <block wx:for="{{goodsobj.pics}}" wx:key="index">
+          <swiper-item>
+                 <image src="{{item.pics_big}}" mode="aspectFill" 
+                 bindtap="handleprew" data-index="{{index}}"></image>
+     
+          </swiper-item>
+        </block>
+</swiper>
+
+<view class="goods-info">
+
+<view class="goods-price">￥{{goodsobj.goods_price}}</view>
+
+<view class="goods-title">
+<view class="goods-left">{{goodsobj.goods_name}}</view>
+<view class="goods-right"><text class="iconfont icon-icon-test12"></text>收藏 </view>
+</view>
+
+<view>快递: 免运费</view>
+
+</view>
+
+
+<view class="goods_detail">
+<view class="detail-name">
+<block wx:for="{{['商品介绍','商品规格']}}" wx:key='index'>
+<view  bindtap="handleclick"  class="{{current===index?'active':''}}"
+ data-index="{{index}}">{{item}}</view>
+</block>
+</view>
+
+<view class="detail-data" wx:if='{{current===0}}'>
+<rich-text nodes="{{goodsobj.goods_introduce}}" 
+      bindtap="tap"></rich-text>
+</view>
+
+<view class="detail-attr" wx:if='{{current===1}}'>
+<view wx:for='{{goodsobj.attrs}}' wx:key='index' class="attr-item">
+<text>{{item.attr_name}}</text>
+<text>{{item.attr_vals}}</text>
+<text>{{item.attr_value}}</text>
+</view>
+</view>
+</view>
+
+
+
+
+<view class="tab">
+
+<view class="btn">
+<button open-type="contact"></button>
+</view>
+
+<!-- <view class="left"> -->
+<view class="left-l" ><text  class="iconfont   icon-icon-test5"></text>联系客服</view>
+<view class="left-l" bindtap="handleTocart"><text  class="iconfont   icon-icon-test16"></text>购物车</view>
+<!-- </view> -->
+
+<!-- <view class="right"> -->
+<view class="right-piece"  wx:for="{{['加入购物车','立即购买']}}" wx:key='index'>{{item}}</view>
+<!-- </view> -->
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>

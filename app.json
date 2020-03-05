@@ -1,9 +1,12 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/category/index",
     "pages/cart/index",
-    "pages/personal/index"   
+    "pages/personal/index",
+    "pages/category/index",  
+    "pages/search/index",
+    "pages/goods_list/index",
+    "pages/goods_detail/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ff0000",
@@ -46,7 +49,7 @@
     "request": 10000,
     "downloadFile": 10000
   },
-  "debug": true,
+  
   "navigateToMiniProgramAppIdList": [
     "wxe5f52902cf4de896"
   ],

@@ -1,4 +1,68 @@
 <!--index.wxml-->
 <view class="container">
-首页
+
+<view class='header'>
+<navigator url="/pages/search/index">
+<view class="search-tab">
+<input class="weui-input" auto-focus placeholder="搜索"/><icon type="search" size="40"/>
+</view>
+</navigator>
+</view>
+
+<view class="swiper">
+ <swiper indicator-dots circular
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{swiperlist}}" wx:key="index">
+          <swiper-item>
+            <view class="swiper-item ">
+          <navigator url=""> 
+          <image src="{{item.image_src}}"></image></navigator> </view>
+          </swiper-item>
+        </block>
+      </swiper>
+</view>
+
+<view class="nav">
+<view class="piece" wx:for='{{navlist}}' wx:key='index'>
+<navigator url="{{item.url}}" open-type="{{item.open_type}}">
+<image src="{{item.image_src}}" mode="aspectFill"></image>
+</navigator>
+</view>
+</view>
+
+<view class="floor" wx:for='{{floordata}}' wx:key='index'>
+
+<view class="floor-title" >
+<navigator url="">
+<image src="{{item.floor_title.image_src}}" mode='aspectFill'></image></navigator></view>
+
+<view class="floor-content">
+<view class="floor-content-left" ><navigator url=""><image src="{{item.product_list[0].image_src}}"></image></navigator></view>
+
+<view class="floor-content-right">
+<view class="floor-piece"
+wx:for='{{item.product_list}}' wx:key='index'
+ wx:if='{{index>0}}'><navigator url=""><image src="{{item.image_src}}"></image></navigator></view>
+</view>
+</view>
+
+</view>
+
+<!-- 回到顶部 -->
+<view class="toTop" bindtap="handletoTop">
+<view class="arrow"></view>
+<text>顶部</text>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
 </view>

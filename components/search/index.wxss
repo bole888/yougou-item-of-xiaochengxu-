@@ -1,0 +1,32 @@
+/* components/search/index.wxss */
+
+
+.header{
+  padding: 20rpx;
+  background-color: #ff0000;
+}
+
+.input{
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  color: #ccc;
+  font-size: 40rpx;
+  height: 60rpx;
+}
+
+icon{
+  margin-right: 20rpx;
+}
+
+.center{
+  justify-content: center;
+}
+.left{
+  justify-content: flex-start;
+}
+.right{
+  justify-content: flex-end;
+}

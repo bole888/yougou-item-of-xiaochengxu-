@@ -1,0 +1,71 @@
+/* pages/goods_list/index.wxss */
+
+.bgc{
+  background: rgba(239, 239, 239)!important;
+}
+
+.header{
+  padding: 25rpx 20rpx;
+  background-color: #ccc;
+}
+
+.input{
+  background: #fff;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  border-radius: 4px;
+  color: #ccc;
+  font-size: 40rpx;
+  height: 60rpx;
+}
+
+icon{
+  margin:0 20rpx;
+}
+
+.attrname{
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #ccc;
+   padding: 30rpx 0;
+}
+
+
+.goodslist navigator{
+  display: flex;
+  padding: 20rpx;
+  border-bottom: 1px solid #ccc;
+}
+.goodslist navigator image{
+     width: 200rpx;
+     height: 200rpx;
+     flex-shrink: 0;
+}
+.right{
+  display: flex;
+  flex:1;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 10rpx;
+}
+
+.goodslist-price text{
+  color: red;
+  font-size: 60rpx;
+}
+
+.goodslist-title{
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+             overflow: hidden;
+}
+          
+ 
+ .bottom {
+      text-align: center;
+ }         
+ /* .bottom .bottom-false{
+      text-align: center;
+ }          */

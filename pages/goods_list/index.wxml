@@ -1,0 +1,31 @@
+<!--pages/goods_list/index.wxml-->
+<!-- <text>pages/goods_list/index.wxml</text> -->
+
+<view class="container">
+
+<search  keyword='{{keyword}}' background='bgc' align='left'/>
+
+<view class="attrname">
+<view wx:for="{{['综合','销量','价格']}}" wx:key='index'>
+{{item}}<text wx:if="{{index===2}}" class='iconfont icon-paixu1'></text>
+</view>
+</view>
+
+<view class="goodslist">
+<block wx:for='{{goodslist}}' wx:key='index'>
+<navigator url="/pages/goods_detail/index?id={{item.goods_id}}">
+<image src="{{item.goods_big_logo}}" mode="aspectFill"></image>
+<view class="right">
+<view class="goodslist-title"> {{item.goods_name}}</view>
+<view class="goodslist-price"> ￥<text>{{item.goods_price}}</text> </view>
+</view>
+</navigator>
+</block>
+</view>
+
+<view class="bottom" >
+<text wx:if='{{hasmore==false}}' >没有更多数据了</text>
+<text wx:if='{{hasmore==true}}' >加载中</text>
+</view>
+
+</view>
