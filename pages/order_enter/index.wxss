@@ -1,3 +1,5 @@
+/* pages/order_enter/index.wxss */
+
 /* pages/cart/index.wxss */
 /* pages/cart/index.wxss */
 
@@ -16,16 +18,7 @@
   display: flex;
   align-items: center;
 }
-.tel::after {
-  display: block;
-  content: '';
-  width: 8px;
-  height: 8px;
-  border-left: 1px solid #999;
-  border-top: 1px solid #999;
-  transform: rotate(135deg);
-  margin: 0 30rpx;
-}
+
 
 .border image {
   display: block;
@@ -149,4 +142,14 @@ input{
 .payfee{
      color: #ff0000;
      font-size: 40rpx;
+    
 }
+.getsum{
+        margin: 50rpx;
+}
+
+
+button{
+      width:100% !important;
+}
+ 

@@ -8,6 +8,7 @@ Page({
     current: 0,
     goods_id: '',
     goodsobj: {}
+   
   },
 
   handleclick(e) {
@@ -54,7 +55,62 @@ Page({
     wx.switchTab({
       url: "/pages/cart/index"
     })
+  } ,
+
+  addInCart(){
+
+    let cartlist = wx.getStorageSync('goods') || [];
+    const exist = cartlist.some( v => {
+      const isexist = v.goods_id === this.data.goodsobj.goods_id;
+      if (isexist) {
+        v.number+=1;
+        wx.showToast({
+          title: '数量+1',
+          icon: 'success',
+        })
+      }
+         return isexist;
+
+    })
+   
+
+  if (!exist){
+    let goodsToCartdata ={
+      goods_id: this.data.goodsobj.goods_id,
+      goods_small_logo: this.data.goodsobj.goods_small_logo,
+      goods_name: this.data.goodsobj.goods_name,
+      goods_price: this.data.goodsobj.goods_price,
+      number: 1,
+      select: true
+    }
+    cartlist.unshift(goodsToCartdata);
+   
+    wx.showToast({
+      title: '商品添加成功',
+      icon: 'success',  
+    })
+    
+   wx.setStorageSync('goods', cartlist);
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 })

@@ -16,7 +16,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.10.2",
-	"appid": "wxf9376fb95106803d",
+	"appid": "wxfb52f2d7b2f6123a",
 	"projectname": "%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -50,9 +50,9 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "pages/category/index",
-					"pathName": "pages/category/index",
-					"query": "",
+					"name": "pages/cart/index",
+					"pathName": "pages/cart/index",
+					"query": "id=25727",
 					"scene": null
 				}
 			]

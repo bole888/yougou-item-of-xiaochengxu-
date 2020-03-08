@@ -65,9 +65,11 @@
 <!-- </view> -->
 
 <!-- <view class="right"> -->
-<view class="right-piece"  wx:for="{{['加入购物车','立即购买']}}" wx:key='index'>{{item}}</view>
+<!-- <view class="right-piece"  bindtap="addInCart"
+ wx:for="{{['加入购物车','立即购买']}}" wx:key='index'>{{item}}</view> -->
 <!-- </view> -->
-
+<view class="right-piece" bindtap="addInCart">加入购物车</view>
+<view class="right-piece" bindtap="addInCart">立即购买</view>
 </view>
 
 

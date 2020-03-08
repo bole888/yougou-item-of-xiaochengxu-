@@ -6,7 +6,10 @@
     "pages/category/index",  
     "pages/search/index",
     "pages/goods_list/index",
-    "pages/goods_detail/index"
+    "pages/goods_detail/index",
+    "pages/order_enter/index",
+    "pages/auth/index",
+    "pages/pay/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ff0000",

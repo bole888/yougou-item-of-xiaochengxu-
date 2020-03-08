@@ -1,0 +1,62 @@
+<!--pages/order_enter/index.wxml-->
+<!--pages/cart/index.wxml-->
+<!-- <text>pages/cart/index.wxml</text> -->
+<!-- 北京市北京经济技术开发区科创十四街99号2号楼B168室 -->
+<!-- {{receverinfo}} -->
+<view class="container">
+
+<view class="header" >
+<view class="userinfo">
+<view>收货人:   {{receverinfo.userName}}</view>
+<view class="tel">{{receverinfo.telNumber}}</view>
+</view>
+<view class="address"> 收货地址: {{receverinfo.provinceName}}  {{receverinfo.cityName }} 
+ {{receverinfo.countyName}}  {{receverinfo.detailInfo}}</view>
+
+</view>
+
+
+<view class="border"><image src="/images/cart_border@2x.png"></image></view>
+<view class="eee"></view>
+
+<view class="title"><text class="iconfont icon-fangjianguanli"></text>优购生活馆</view>
+
+<view class="list">
+<block wx:for='{{cartlist}}' wx:key='index'>
+<view class="goods-item" wx:if='{{item.select}}'>
+<view class="left">
+
+<image src='{{item.goods_small_logo}}'></image>
+</view>
+<view class="right">
+<text>{{item.goods_name}}</text>
+<view class="under">
+<view class="price">￥{{item.goods_price}}.00</view>
+<view class="calc">
+数量*{{item.number}}
+</view>
+</view>
+
+</view>
+</view>
+</block>
+</view>
+
+<view class="getsum">合计：<text class="payfee">￥{{allprice}}.00</text></view>
+
+<button type="primary" 
+        bindtap="handlepay"> 立即支付 </button>
+
+
+<!-- open-type="openSetting" -->
+
+
+
+
+
+
+
+
+
+
+</view>

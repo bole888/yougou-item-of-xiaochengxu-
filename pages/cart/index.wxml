@@ -1,2 +1,90 @@
 <!--pages/cart/index.wxml-->
-<text>pages/cart/index.wxml</text>
+<!-- <text>pages/cart/index.wxml</text> -->
+<!-- 北京市北京经济技术开发区科创十四街99号2号楼B168室 -->
+<!-- {{receverinfo}} -->
+<view class="container">
+
+<view class="header" wx:if='{{receverinfo.userName}}'>
+<view class="userinfo">
+<view>收货人:   {{receverinfo.userName}}</view>
+<view class="tel">{{receverinfo.telNumber}}</view>
+</view>
+<view class="address"> 收货地址: {{receverinfo.provinceName}}  {{receverinfo.cityName }}  {{receverinfo.countyName}}  {{receverinfo.detailInfo}}</view>
+
+</view>
+
+<view class="header" wx:if='{{!receverinfo.userName}}'>
+<view class="nouserinfo" bindtap="handlereceiveinfo">
+点击获取收货人信息
+</view>
+</view>
+
+<view class="border"><image src="/images/cart_border@2x.png"></image></view>
+<view class="eee"></view>
+
+<view class="title"><text class="iconfont icon-fangjianguanli"></text>优购生活馆</view>
+
+<view class="list">
+<block wx:for='{{cartlist}}' wx:key='index'>
+<view class="goods-item">
+<view class="left">
+<icon type="success" color="{{item.select?'red':'gray'}}"  bindtap="handleselect" data-index="{{index}}"    data-select="{{item.select}}"/>
+<image src='{{item.goods_small_logo}}'></image>
+</view>
+<view class="right">
+<text>{{item.goods_name}}</text>
+<view class="under">
+<view class="price">￥{{item.goods_price}}.00</view>
+<view class="calc">
+<view class="calc-price" bindtap="calcnumber" data-index="{{index}}"
+ data-number="{{-1}}">-</view>
+<!-- <view>{{item.number}}</view> --> 
+<input value="{{item.number}}" type="number"  data-index="{{index}}"  bindblur="handleblur"/>
+<view class="calc-price" bindtap="calcnumber" data-index="{{index}}"
+data-number="{{1}}">+</view>
+</view>
+</view>
+
+</view>
+</view>
+</block>
+</view>
+
+
+<view class="bottom">
+
+<view class="bottom-left">
+<icon type="success" color="{{Allselect?'red':'gray'}}"  data-select="{{Allselect}}"
+ bindtap="handleChooseAll"/>全选
+</view>
+
+<view class="bottom-right">
+
+<view class="total">
+<view>合计：<text class="payfee">￥{{allprice}}.00</text></view>
+<view class="send">包含运费</view>
+</view>
+
+<view class="pay">
+<navigator url="/pages/order_enter/index">结算</navigator>
+
+</view>
+
+</view>
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>
